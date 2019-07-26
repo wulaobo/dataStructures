@@ -1,5 +1,7 @@
 package com.wulaobo.linked;
 
+import java.util.Stack;
+
 public class SingleLinkedListDemo {
 
     public static void main(String[] args) {
@@ -15,10 +17,14 @@ public class SingleLinkedListDemo {
         linkedList.add(hero4);
         System.out.println("添加后：");
         linkedList.list();
-        System.out.println("反转单链表后：");
-        linkedList.reverse();
-        linkedList.list();
+//        System.out.println("反转单链表后：");
+//        linkedList.reverse();
+//        linkedList.list();
 
+        System.out.println("逆序打印单链表:");
+        linkedList.reverseLinkedList();
+        System.out.println("添加后：");
+        linkedList.list();
 
 //        linkedList.addByOrder(hero1);
 //        linkedList.addByOrder(hero4);
@@ -43,9 +49,7 @@ public class SingleLinkedListDemo {
     }
 
 
-
-
-
+    
 }
 
 //单链表
@@ -261,6 +265,27 @@ class SingleLinkedList {
         head.next = reverseHead.next;
 
     }
+
+    //逆序遍历单链表
+    public void reverseLinkedList() {
+        if(head.next==null) {
+            System.out.println("空链表");
+            return;
+        }
+
+        Hero cur = head.next;
+        Stack<Hero> stack = new Stack<>();
+        while (cur!=null) {
+            stack.push(cur);
+            cur = cur.next;
+        }
+
+        while (!stack.empty()){
+            System.out.println(stack.pop());
+        }
+
+    }
+
 
 
 }
