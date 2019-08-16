@@ -8,16 +8,16 @@ import java.util.Date;
 public class BubbleSort {
 
     public static void main(String[] args) {
-//        int[] arr =new int[80000];
-          int[] arr = {5,4,3,2,1};
-//        for(int i = 0;i<80000;i++) {
-//            arr[i] = (int) (Math.random()*8000000);
-//        }
+        int[] arr =new int[80000];
+//          int[] arr = {5,4,3,2,1};
+        for(int i = 0;i<80000;i++) {
+            arr[i] = (int) (Math.random()*8000000);
+        }
 
-//        Date date1 = new Date();
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String date1Str =sdf.format(date1);
-//        System.out.println("排序前的时间是:"+date1Str);
+        Date date1 = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date1Str =sdf.format(date1);
+        System.out.println("排序前的时间是:"+date1Str);
 
 
         int length = arr.length;
@@ -33,7 +33,7 @@ public class BubbleSort {
                 }
             }
 
-            System.out.println("第"+(i+1)+"趟排序的结果为："+ Arrays.toString(arr));
+//            System.out.println("第"+(i+1)+"趟排序的结果为："+ Arrays.toString(arr));
 
             if(!flag) {
                 break;
@@ -45,10 +45,10 @@ public class BubbleSort {
         }
 
 
-//        Date date2 = new Date();
-//       // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String date2Str =sdf.format(date2);
-//        System.out.println("排序后的时间是:"+date2Str);
+        Date date2 = new Date();
+       // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date2Str =sdf.format(date2);
+        System.out.println("排序后的时间是:"+date2Str);
 
     }
 

@@ -34,14 +34,17 @@ public class SelectSort {
             int minIndex = i;
             for(int j = i+1;j<length;j++) {
                 if(arr[j]<min) {
-                    arr[i] = arr[j];
+                    min = arr[j];
                     minIndex = j;
+
                 }
             }
             if(minIndex!=i){
-                arr[minIndex] = min;
+                arr[minIndex] = arr[i];
+                arr[i] = min;
             }
 
+//            System.out.println("第"+(i+1)+"趟："+Arrays.toString(arr));
 
         }
     }
