@@ -8,9 +8,9 @@ import java.util.Date;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr =new int[80000];
+        int[] arr =new int[8000];
 //          int[] arr = {5,4,3,2,1};
-        for(int i = 0;i<80000;i++) {
+        for(int i = 0;i<8000;i++) {
             arr[i] = (int) (Math.random()*8000000);
         }
 
